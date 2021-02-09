@@ -3,3 +3,5 @@ bower_components
 bundle.js
 output
 *~
+dist
+.cache

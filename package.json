@@ -5,7 +5,8 @@
   "scripts": {
     "postinstall": "bower install",
     "build": "pulp browserify --to bundle.js",
-    "test": "pulp test"
+    "test": "pulp test",
+    "start": "concurrently \"pulp --watch build --to ./bundle.js\" \"parcel index.html\""
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,9 @@
     "@funkia/turbine": "^0.4.0",
     "pulp": "^13.0.0",
     "purescript": "^0.13.3"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "parcel-bundler": "^1.12.4"
   }
 }
